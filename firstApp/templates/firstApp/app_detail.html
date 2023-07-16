@@ -1,0 +1,22 @@
+{% extends "user_base.html" %}
+{% block content %}
+
+  <a href="{% url 'firstApp:user_home' %}">< {{app.name}}</a>
+  <div class="para">
+    <img src="{{app.icon}}" alt="" height="100px" width="100px">
+    <strong>{{app.name}}</strong>
+    <span class="points-button" style="float: right;">
+      {{app.points}} points
+    </span>
+    <a href="{{app.link}}">{{app.link}}</a>
+
+    <div class="file-droppable">
+      <div><b>Upload screenshots to complete the TASK</b></div>
+      <span>&times;</span>
+      <input type="file" name="upload" />
+    </div>
+  </div>
+
+  
+
+{% endblock %}

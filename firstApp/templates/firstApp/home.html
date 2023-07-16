@@ -1,0 +1,16 @@
+{% extends "user_base.html" %}
+{% block content %}
+
+    {% for app in android_apps %}
+        <div class="para">
+            <img src="{{app.icon}}" alt="" height="100px" width="100px">
+            <strong>{{app.name}}</strong>
+            <a href="{% url 'firstApp:app_detail' pk=app.id %}">view in detail ></a>
+            <span class="points-button" style="float: right;">
+                {{app.points}} points
+            </span>
+            
+        </div>
+    {% endfor %}
+
+{% endblock %}

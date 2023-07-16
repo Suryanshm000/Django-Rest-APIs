@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+
+  <div class="container">
+    <h2>Admin home</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>App Name</th>
+          <th>Points</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for app in android_apps %}
+        <tr>
+          <td>{{ app.name }}</td>
+          <td>{{ app.points }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+{% endblock %}
